@@ -2,7 +2,7 @@ import { countries } from 'countries-list';
 import '../styles/form.css';
 
 const SelectCountries = ({ formik }) => {
-  const countryPhoneCodes = Object.entries(countries).map(
+  const selectCountry = Object.entries(countries).map(
     ([code, country]) => ({
       code,
       name: country.name,
@@ -20,7 +20,7 @@ const SelectCountries = ({ formik }) => {
         required
       >
         <option value="">Seleccione su país</option>
-        {countryPhoneCodes.map((country) => (
+        {selectCountry.map((country) => (
           <option key={country.code} value={country.name}>
             {country.name}
           </option>
